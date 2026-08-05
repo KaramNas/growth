@@ -93,41 +93,8 @@ export default function HeroSection() {
 
       {/* ── Wave video — lower 45 % of the screen ────────────────────── */}
       <div className="absolute bottom-0 left-0 right-0" style={{ height: '45%' }}>
-        {/* Top fade — blends video into the dark grid bg */}
-        <div
-          className="absolute top-0 left-0 right-0 z-10 pointer-events-none"
-          style={{
-            height: '45%',
-            background: 'linear-gradient(to bottom, #080808 0%, transparent 100%)',
-          }}
-        />
-        {/* Left edge fade */}
-        <div
-          className="absolute inset-y-0 left-0 z-10 pointer-events-none"
-          style={{
-            width: '12%',
-            background: 'linear-gradient(to right, #080808 0%, transparent 100%)',
-          }}
-        />
-        {/* Right edge fade */}
-        <div
-          className="absolute inset-y-0 right-0 z-10 pointer-events-none"
-          style={{
-            width: '12%',
-            background: 'linear-gradient(to left, #080808 0%, transparent 100%)',
-          }}
-        />
-        {/* Bottom fade — blends into the next section */}
-        <div
-          className="absolute bottom-0 left-0 right-0 z-10 pointer-events-none"
-          style={{
-            height: '40%',
-            background: 'linear-gradient(to top, #080808 0%, transparent 100%)',
-          }}
-        />
-
         <video
-          src="/growthwave2.mp4"
+          src="/growthwave2-Picsart-BackgroundRemover.webm"
           autoPlay
           loop
           muted
