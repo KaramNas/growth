@@ -4,6 +4,7 @@ import GridHighlight from './GridHighlight';
 import GridIcons from './GridIcons';
 import FloatingServices from './FloatingServices';
 import DotsButton from './DotsButton';
+import AnimatedText from './AnimatedText';
 
 const fadeUp = (delay: number) => ({
   initial: { opacity: 0, y: 28 },
@@ -51,23 +52,23 @@ export default function HeroSection() {
         className="absolute left-0 top-0 right-0 flex items-center z-30 pointer-events-auto"
         style={{ bottom: '45%', paddingLeft: 'clamp(2rem, 8vw, 7rem)' }}
       >
-        <div className="max-w-xl flex flex-col gap-6">
+        <div className="flex flex-col gap-6" style={{ maxWidth: '100%' }}>
           {/* Label */}
           <motion.p
             {...fadeUp(0.6)}
             className="text-orange text-[10px] uppercase tracking-[0.35em] font-medium mb-7"
           >
-            Digital Marketing Agency &nbsp;·&nbsp; Lebanon
+            AI & LLM Solutions &nbsp;·&nbsp; Lebanon
           </motion.p>
 
           {/* Main heading */}
           <motion.h1
             {...fadeUp(0.8)}
             className="text-white font-black leading-[1.05] mb-7"
-            style={{ fontSize: 'clamp(2.8rem, 5.5vw, 5.5rem)' }}
+            style={{ fontSize: 'clamp(2.2rem, 4.5vw, 4.5rem)' }}
           >
-            We create<br />
-            <span className="text-orange">Growth</span>
+            AI that<br />
+            <AnimatedText />
           </motion.h1>
 
           {/* Sub-copy */}
@@ -75,8 +76,8 @@ export default function HeroSection() {
             {...fadeUp(1.0)}
             className="text-white/45 text-[0.9rem] leading-relaxed mb-10 max-w-xs mt-5"
           >
-            An ocean of channels, strategies, and possibilities —
-            we surface exactly what grows your brand.
+            LLM, computer vision, and machine learning solutions that understand,
+            see, and learn from your data to drive real business value.
           </motion.p>
 
           {/* CTA */}

@@ -2,9 +2,9 @@
 import { motion } from 'framer-motion';
 
 const stats = [
-  { value: '50+', label: 'Brands Scaled' },
-  { value: '3×',  label: 'Average ROAS'  },
-  { value: '5',   label: 'Years Active'  },
+  { value: '25+', label: 'AI Models Deployed' },
+  { value: '10+',  label: 'Fortune 500 Clients'  },
+  { value: '7',   label: 'Years in AI'  },
 ];
 
 const fadeUp = (delay = 0) => ({
@@ -63,9 +63,8 @@ export default function AboutSection() {
               className="text-white font-black leading-[1.08]"
               style={{ fontSize: 'clamp(2.2rem, 4.5vw, 4.2rem)' }}
             >
-              Built to grow<br />
-              brands that refuse<br />
-              to stay <span className="text-orange">small.</span>
+              Enterprise AI built<br />
+              for the <span className="text-orange">future.</span>
             </motion.h2>
           </div>
 
@@ -75,17 +74,17 @@ export default function AboutSection() {
               {...fadeUp(0.3)}
               className="text-white/45 text-[0.95rem] leading-[1.8]"
             >
-              Growth is a Beirut-born performance marketing agency that operates at the
-              intersection of data, creativity, and strategy. We don't run campaigns —
-              we engineer systems that compound over time.
+              We're an AI-first company building large language models, computer vision systems,
+              and intelligent automation for enterprise clients. Our models understand language,
+              see images, and automate complex workflows at scale.
             </motion.p>
 
             <motion.p
               {...fadeUp(0.4)}
               className="text-white/45 text-[0.95rem] leading-[1.8]"
             >
-              From paid media to brand identity, every channel we touch is built
-              with one metric in mind: sustainable, measurable growth for your business.
+              From natural language processing to real-time vision analytics, every system we build
+              is optimized for accuracy, latency, and integration with your existing infrastructure.
             </motion.p>
 
             <motion.a

@@ -76,15 +76,15 @@ export default function ContactSection() {
             className="text-white font-black leading-[1.08]"
             style={{ fontSize: 'clamp(2.2rem, 4.5vw, 4.2rem)' }}
           >
-            Let's build <br />
-            something <span className="text-orange">extraordinary</span> together.
+            Let's build AI<br />
+            that <span className="text-orange">matters.</span>
           </motion.h2>
 
           <motion.p
             {...fadeUp(0.3)}
             className="text-white/45 text-[0.95rem] leading-[1.8] max-w-lg"
           >
-            Have a project in mind? We'd love to hear about it. Reach out and let's start a conversation about how we can help grow your vision.
+            Have an AI challenge? We'd love to hear about it. Let's discuss how LLMs, computer vision, or custom models can transform your business.
           </motion.p>
         </div>
 

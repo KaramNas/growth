@@ -1,38 +1,38 @@
 'use client';
 import { motion } from 'framer-motion';
-import { Zap, TrendingUp, Palette, Search, Mail, Share2, Megaphone, PenLine } from 'lucide-react';
+import { Brain, Zap, Eye, Cpu, Network, Lightbulb } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 
 const services = [
   {
-    icon: Megaphone,
-    title: 'Paid Advertising',
-    description: 'Strategic campaigns across all major platforms to drive immediate, measurable results.',
+    icon: Brain,
+    title: 'Large Language Models',
+    description: 'Custom LLMs fine-tuned on your domain data for precision, accuracy, and reduced hallucinations.',
   },
   {
-    icon: Share2,
-    title: 'Social Media',
-    description: 'Content strategies and community management that turn followers into loyal customers.',
+    icon: Eye,
+    title: 'Computer Vision',
+    description: 'Real-time image recognition, object detection, and visual understanding at enterprise scale.',
   },
   {
-    icon: Search,
-    title: 'SEO & Search',
-    description: 'Organic visibility through technical optimization and strategic keyword targeting.',
+    icon: Zap,
+    title: 'Generative AI',
+    description: 'Text generation, image synthesis, and multimodal models for creative and practical applications.',
   },
   {
-    icon: PenLine,
-    title: 'Content Strategy',
-    description: 'Compelling narratives and messaging frameworks built for conversion and retention.',
+    icon: Cpu,
+    title: 'Model Optimization',
+    description: 'Quantization, pruning, and deployment optimization for edge and cloud environments.',
   },
   {
-    icon: Mail,
-    title: 'Email Marketing',
-    description: 'Personalized campaigns that nurture leads and maximize lifetime customer value.',
+    icon: Network,
+    title: 'AI Integration',
+    description: 'Seamless integration of AI models into your existing systems, APIs, and workflows.',
   },
   {
-    icon: Palette,
-    title: 'Brand Identity',
-    description: 'Visual systems and messaging that differentiate and resonate with your audience.',
+    icon: Lightbulb,
+    title: 'AI Strategy',
+    description: 'Consulting and roadmapping to identify high-impact AI opportunities for your business.',
   },
 ];
 
@@ -80,7 +80,7 @@ export default function ServicesSection() {
             {...fadeUp(0.1)}
             className="text-orange text-[10px] uppercase tracking-[0.35em] font-medium"
           >
-            What We Do
+            What We Build
           </motion.p>
 
           <motion.h2
@@ -88,8 +88,8 @@ export default function ServicesSection() {
             className="text-white font-black leading-[1.08]"
             style={{ fontSize: 'clamp(2.2rem, 4.5vw, 4.2rem)' }}
           >
-            A full stack of services <br />
-            designed to <span className="text-orange">accelerate growth.</span>
+            Complete AI solutions <br />
+            from research to <span className="text-orange">production.</span>
           </motion.h2>
         </div>
 

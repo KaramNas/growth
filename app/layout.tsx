@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Growth | Digital Marketing Agency',
-  description: 'We create growth.',
+  title: 'Nexus AI | LLM & Computer Vision Solutions',
+  description: 'Enterprise AI solutions: LLMs, computer vision, and machine learning models for the modern world.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
