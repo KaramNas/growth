@@ -1,6 +1,5 @@
 'use client';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 
 const leftLinks = ['Services', 'Work'];
 const rightLinks = ['About', 'Contact'];
@@ -54,14 +53,9 @@ export default function Navbar() {
         transition={{ duration: 0.9, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
         className="w-72 flex justify-center items-center flex-shrink-0"
       >
-        <Image
-          src="/growthlogo.png"
-          alt="Growth"
-          width={150}
-          height={60}
-          style={{ height: 60, width: 'auto', objectFit: 'contain' }}
-          priority
-        />
+        <a href="#hero" className="text-orange font-black text-2xl tracking-[0.1em]">
+          GROWTH
+        </a>
       </motion.div>
 
       {/* Right links — spread outward from center */}

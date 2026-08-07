@@ -1,6 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import GridHighlight from './GridHighlight';
+import GridIcons from './GridIcons';
 import FloatingServices from './FloatingServices';
 import DotsButton from './DotsButton';
 
@@ -29,6 +30,9 @@ export default function HeroSection() {
       {/* ── Grid cell hover highlight ─────────────────────────────────── */}
       <GridHighlight />
 
+      {/* ── Grid icons on hover ──────────────────────────────────────────── */}
+      <GridIcons />
+
       {/* ── Orange radial glow – sits behind text area ─────────────────── */}
       <div
         className="absolute pointer-events-none"
@@ -44,7 +48,7 @@ export default function HeroSection() {
 
       {/* ── Hero text — upper-left, vertically centred above the video ── */}
       <div
-        className="absolute left-0 top-0 right-0 flex items-center"
+        className="absolute left-0 top-0 right-0 flex items-center z-30 pointer-events-auto"
         style={{ bottom: '45%', paddingLeft: 'clamp(2rem, 8vw, 7rem)' }}
       >
         <div className="max-w-xl flex flex-col gap-6">
@@ -76,14 +80,25 @@ export default function HeroSection() {
           </motion.p>
 
           {/* CTA */}
-          <motion.div {...fadeUp(1.2)} className="flex items-center gap-6">
-            <DotsButton href="#contact">Get Started</DotsButton>
-            <a
+          <motion.div {...fadeUp(1.2)} className="flex items-center gap-8">
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ type: 'spring', stiffness: 400, damping: 10 }}
+            >
+              <DotsButton href="#contact">Get Started</DotsButton>
+            </motion.div>
+            <motion.a
               href="#work"
-              className="text-white/35 text-[10px] uppercase tracking-[0.3em] hover:text-orange transition-colors duration-300"
+              className="text-white/35 text-[10px] uppercase tracking-[0.3em] transition-all duration-300"
+              whileHover={{
+                color: 'rgba(255,69,0,1)',
+                x: 4,
+              }}
+              transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
             >
               View Work →
-            </a>
+            </motion.a>
           </motion.div>
         </div>
       </div>
@@ -92,14 +107,23 @@ export default function HeroSection() {
       <FloatingServices />
 
       {/* ── Wave video — lower 45 % of the screen ────────────────────── */}
-      <div className="absolute bottom-0 left-0 right-0" style={{ height: '45%' }}>
+      <div className="absolute bottom-0 left-0 right-0" style={{ height: '55%' }}>
         <video
-          src="/growthwave2-Picsart-BackgroundRemover.webm"
+          src="/growthwave2 4K (1).webm"
           autoPlay
           loop
           muted
           playsInline
           className="w-full h-full object-cover object-top"
+          style={{ mixBlendMode: 'lighten' }}
+        />
+        {/* Fade out at bottom */}
+        <div
+          className="absolute bottom-0 left-0 right-0 pointer-events-none"
+          style={{
+            height: '40%',
+            background: 'linear-gradient(to bottom, transparent 0%, #080808 100%)',
+          }}
         />
       </div>
     </section>

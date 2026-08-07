@@ -102,7 +102,7 @@ export default function FloatingServices() {
           </span>
 
           {/* Label */}
-          <span className="text-[9px] uppercase tracking-[0.3em] text-white/50 font-medium whitespace-nowrap">
+          <span className="text-[9px] uppercase tracking-[0.3em] text-white font-medium whitespace-nowrap">
             {svc.label}
           </span>
         </div>

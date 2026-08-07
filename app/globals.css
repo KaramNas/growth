@@ -17,12 +17,24 @@
   padding: 0;
 }
 
-html,
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
 body {
   background-color: #080808;
   color: #fafafa;
   font-family: 'Space Grotesk', sans-serif;
   overflow-x: hidden;
+  scroll-padding-top: 0;
+}
+
+section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  min-height: 100vh;
 }
 
 ::selection {

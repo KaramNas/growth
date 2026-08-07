@@ -44,7 +44,7 @@ export default function AboutSection() {
         }}
       />
 
-      <div className="relative py-28 flex flex-col gap-24" style={{ paddingLeft: '10%', paddingRight: '10%' }}>
+      <div className="relative flex flex-col gap-24" style={{ paddingLeft: '10%', paddingRight: '10%', paddingTop: '8rem', paddingBottom: '8rem' }}>
 
         {/* ── Top row: eyebrow + headline split ────────────────────────── */}
         <div className="flex flex-col gap-16 lg:flex-row lg:gap-24">
