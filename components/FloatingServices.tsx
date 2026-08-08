@@ -2,26 +2,26 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import {
-  Megaphone,
-  Share2,
-  Search,
-  PenLine,
-  Mail,
-  Palette,
-  TrendingUp,
-  Zap,
+  Brain,
+  Eye,
+  Cpu,
+  Plug,
+  Database,
+  Network,
+  Workflow,
+  Gauge,
 } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 
 const services: { label: string; xPct: number; Icon: LucideIcon }[] = [
-  { label: 'Paid Advertising',  xPct: 8,  Icon: Megaphone  },
-  { label: 'Social Media',      xPct: 48, Icon: Share2      },
-  { label: 'SEO & Search',      xPct: 24, Icon: Search      },
-  { label: 'Content Strategy',  xPct: 64, Icon: PenLine     },
-  { label: 'Email Marketing',   xPct: 36, Icon: Mail        },
-  { label: 'Brand Identity',    xPct: 56, Icon: Palette     },
-  { label: 'Analytics',         xPct: 14, Icon: TrendingUp  },
-  { label: 'Growth Hacking',    xPct: 72, Icon: Zap         },
+  { label: 'LLM Solutions',     xPct: 8,  Icon: Brain       },
+  { label: 'Computer Vision',   xPct: 48, Icon: Eye         },
+  { label: 'Model Training',    xPct: 24, Icon: Cpu         },
+  { label: 'AI Integration',    xPct: 64, Icon: Plug        },
+  { label: 'Data Processing',   xPct: 36, Icon: Database    },
+  { label: 'Neural Networks',   xPct: 56, Icon: Network     },
+  { label: 'ML Pipeline',       xPct: 14, Icon: Workflow    },
+  { label: 'AI Optimization',   xPct: 72, Icon: Gauge       },
 ];
 
 const STAGGER      = 2.5;

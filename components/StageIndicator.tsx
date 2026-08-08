@@ -59,9 +59,10 @@ export default function StageIndicator() {
             className="text-right overflow-hidden"
             animate={{
               opacity: activeStage === index ? 1 : 0.3,
-              x: activeStage === index ? 0 : 8,
+              x: activeStage === index ? 0 : 12,
+              scale: activeStage === index ? 1 : 0.95,
             }}
-            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           >
             <p className="text-orange text-[10px] uppercase tracking-[0.2em] font-medium whitespace-nowrap leading-tight">
               {stage.label}
@@ -74,33 +75,23 @@ export default function StageIndicator() {
           {/* Dot indicator */}
           <motion.button
             onClick={() => handleClick(stage.id)}
-            className="rounded-full flex-shrink-0"
+            className="rounded-full flex-shrink-0 transition-all"
             animate={{
               width: activeStage === index ? 32 : 12,
               height: 12,
               backgroundColor: activeStage === index ? '#FF4500' : 'rgba(255, 255, 255, 0.2)',
+              scale: activeStage === index ? 1 : 0.9,
             }}
             whileHover={{
               backgroundColor: activeStage === index ? '#FF4500' : 'rgba(255, 255, 255, 0.4)',
+              scale: 1.05,
             }}
-            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             aria-label={`Go to ${stage.name}`}
           />
         </motion.div>
       ))}
 
-      {/* Progress line */}
-      <motion.div
-        className="absolute right-[6px] w-px bg-gradient-to-b from-orange/50 to-orange/0 pointer-events-none"
-        style={{
-          top: `calc(50% - ${(stages.length * STAGE_HEIGHT) / 2}px)`,
-        }}
-        animate={{
-          height: STAGE_HEIGHT + 20,
-          y: activeStage * STAGE_HEIGHT,
-        }}
-        transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-      />
     </div>
   );
 }
